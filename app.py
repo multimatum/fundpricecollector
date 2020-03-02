@@ -36,9 +36,11 @@ def send_message():
     else:
         pct_sign = ''
 
-    message_body = '南商中國源動力基金：\n{0} 價格: {1}\n{2} 價格: {3}\n變動: {4}{5:.2%}'.format(date_last_2, price_last_2,
-                                                                                                                            date_last, price_last,
-                                                                                                                            pct_sign, change_pct)
+    message_1 = '南商中國源動力基金'
+    message_2 = '{0} 價格: {1}'.format(date_last_2, price_last_2)
+    message_3 = '{0} 價格: {1}'.format(date_last, price_last)
+    message_4 = '變動: {0}{1:.2%}'.format(pct_sign, change_pct)
+                                                              
     # message = client.messages.create( 
     #                             from_='whatsapp:+14155238886',  
     #                             body= message_body,      
@@ -51,7 +53,7 @@ def send_message():
     #                         ) 
     
     # print(message.sid)
-    return message_body
+    return [message_1, message_2, message_3, message_4]
 
 @app.route("/")
 def index():
@@ -71,7 +73,7 @@ def success():
         # SEND WHATSAPP MESSAGE
         message = send_message()
         
-        return render_template('success.html', message=message)
+        return render_template('success.html', message_1=message[0], message_2=message[1], message_3=message[2], message_4=message[3])
     else:
        pass
 
