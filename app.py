@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 from firebase import firebase
 # import json
 from datetime import date
-from twilio.rest import Client
+#from twilio.rest import Client
 
 #import config
 #client = Client(config.ACCOUNT_SID, config.AUTH_TOKEN) 
