@@ -8,7 +8,7 @@ from twilio.rest import Client
 
 #import config
 #client = Client(config.ACCOUNT_SID, config.AUTH_TOKEN) 
-client = Client(ACCOUNT_SID, AUTH_TOKEN) 
+#client = Client(ACCOUNT_SID, AUTH_TOKEN) 
 
 app = Flask(__name__)
 firebase = firebase.FirebaseApplication('https://fundpricescraperncb.firebaseio.com/') # copy this from Firebase >> Database >> link next to the chain icon
