@@ -3,7 +3,7 @@ cffi==1.14.0
 chardet==3.0.4
 Click==7.0
 Crypto==1.4.1
-cryptography==2.8
+cryptography==3.2
 DateTime==4.3
 firebase==3.0.1
 Flask==1.1.1
